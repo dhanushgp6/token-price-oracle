@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        const conn = await mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017/token-oracle');
+        const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/token-oracle');
         console.log('📦 MongoDB connected successfully');
     } catch (error) {
         console.error('❌ MongoDB connection failed:', error.message);
